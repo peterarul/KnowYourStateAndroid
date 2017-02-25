@@ -1,0 +1,66 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.recycler.proto.states.myapplication.ListItemFragment"
+    android:id="@+id/list_fragment"
+    android:clipChildren="false">
+
+    <!-- TODO: Update blank fragment layout -->
+    <com.github.ksoichiro.android.observablescrollview.ObservableScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        android:minHeight="500sp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <View
+                android:id="@+id/anchor"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/parallax_image_height"
+                android:minHeight="@dimen/parallax_image_height" />
+
+
+            <ProgressBar
+                android:id="@+id/progress_bar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false"
+                android:paddingBottom="@dimen/md_keylines"
+                android:paddingTop="@dimen/md_keylines"
+                android:scrollbars="vertical"
+                android:id="@+id/my_recycler_view"
+                android:layout_marginTop="25dp"
+                />
+
+
+        </RelativeLayout>
+
+
+
+
+    </com.github.ksoichiro.android.observablescrollview.ObservableScrollView>
+
+
+
+    <include layout="@layout/gradient_header" />
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:popupTheme="@style/Theme.AppCompat.Light.DarkActionBar"
+        android:theme="@style/Toolbar"
+        />
+
+</RelativeLayout>
